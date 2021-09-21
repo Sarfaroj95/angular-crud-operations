@@ -1,0 +1,92 @@
+<div class="backdrop"></div>
+<div class="alert-box">
+  <div>
+    <h2>
+      <span *ngIf="!editMode"> Basic</span>
+      <span *ngIf="editMode > 0"> Update</span>
+      Information
+    </h2>
+    <div *ngIf="msg" class="toaster-succes pt-1">
+      {{ msg }}
+    </div>
+    <form [formGroup]="loginForm">
+      <div class="form-group mt-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control sd"
+            placeholder="Student name"
+            formControlName="sname"
+            [(ngModel)]="data.sname"
+            (keypress)="onlyAlpha($event)"
+          />
+        </div>
+        <div class="form-group mt-3">
+          <input
+            type="text"
+            class="form-control sd"
+            placeholder="Father name"
+            formControlName="fname"
+            [(ngModel)]="data.fname"
+            (keypress)="onlyAlpha($event)"
+          />
+        </div>
+        <div class="form-group mt-3">
+          <input
+            type="email"
+            class="form-control sd"
+            placeholder="Address"
+            formControlName="address"
+            [(ngModel)]="data.address"
+          />
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <input
+          type="text"
+          class="form-control sd"
+          placeholder="phone"
+          formControlName="phone"
+          [(ngModel)]="data.phone"
+          maxlength="10"
+          (keypress)="onlyNumber($event)"
+        />
+      </div>
+      <div class="form-group mt-3">
+        <input
+          type="date"
+          class="form-control sd"
+          placeholder="Class"
+          formControlName="dob"
+          [(ngModel)]="data.dob"
+          [max]="maxDate"
+        />
+      </div>
+      <div class="form-group mt-3">
+        <select
+          class="form-select"
+          formControlName="class"
+          [(ngModel)]="data.class"
+        >
+          <option selected disabled>Select class</option>
+          <option value="one">One</option>
+          <option value="two">Two</option>
+          <option value="three">Three</option>
+          <option value="four">Four</option>
+        </select>
+      </div>
+      <div class="mt-4 d-flex justify-content-end">
+        <button
+          type="submit"
+          (click)="onSubmit()"
+          class="btn btn-primary sd btn-space"
+        >
+          <span *ngIf="editMode > 0"> Update</span>
+          <span *ngIf="!editMode"> Submit</span>
+          <span style="font-size: 18px">&#8250;</span>
+        </button>
+        <button class="btn btn-light" (click)="onClose()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

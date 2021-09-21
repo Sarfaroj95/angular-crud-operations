@@ -1,0 +1,10 @@
+<div class="backdrop" (click)="onClose()"></div>
+<div class="alert-box">
+  <div>
+    <p class="alert-message">{{ confirm }}</p>
+  </div>
+  <div class="alert-box-action">
+    <button class="btn btn-light btn-space" (click)="onClose()">Cancel</button>
+    <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+  </div>
+</div>

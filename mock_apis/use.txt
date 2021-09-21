@@ -1,0 +1,2 @@
+Package: npm install -g json-server [Install First time]
+Run: json-server --watch db.json [Run Fake DB]

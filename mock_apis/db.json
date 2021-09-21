@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "first_name": "Sarfaroj",
+      "last_name": "Gayen",
+      "email": "sarfaroj@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "password": "",
+      "id": 2
+    }
+  ],
+  "students": [
+    {
+      "sname": "Rahul Pal",
+      "fname": "Ramnath Singh",
+      "address": "23, Banisankari, Kabngalore",
+      "phone": "1234567890",
+      "dob": "2021-08-02",
+      "class": "one",
+      "id": 1
+    }
+  ]
+}

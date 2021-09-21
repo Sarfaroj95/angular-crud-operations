@@ -1,0 +1,16 @@
+.main-section {
+  height: 100vh;
+}
+.left-section {
+  background-color: #3f220f;
+  height: 100vh;
+}
+.right-section {
+  padding: 4rem;
+}
+.form-section {
+  margin-top: 7rem;
+}
+.sd {
+  box-shadow: 0px 10px 18px rgb(0 0 0 / 10%);
+}

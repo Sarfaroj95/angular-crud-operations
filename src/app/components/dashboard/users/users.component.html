@@ -1,0 +1,56 @@
+<div class="pb-3">
+  <button class="btn btn-primary" (click)="addNew()">Add New</button>
+</div>
+<div>
+  <app-add-new-user
+    [message]="msg"
+    *ngIf="msg || editID > 0"
+    [editMode]="editID"
+    [data]="studentData"
+    (close)="onHandl()"
+    (submit)="getCurrent()"
+  ></app-add-new-user>
+  <app-alert
+    [confirm]="confirmMsg"
+    *ngIf="confirmMsg"
+    (close)="closeAlert()"
+    (delete)="deleteStudent()"
+  ></app-alert>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Student Name</th>
+      <th scope="col">Father Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Class</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of students">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.sname }}</td>
+      <td>{{ item.fname }}</td>
+      <td>{{ item.phone }}</td>
+      <td>{{ item.address }}</td>
+      <td>{{ item.dob }}</td>
+      <td>{{ item.class | titlecase }}</td>
+      <td>
+        <span class="action-icon" title="Edit" (click)="editForm(item.id)">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </span>
+        <span (click)="deleteAlert(item.id)" title="Delete">
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="w-100" *ngIf="students.length <= 0">
+  <p class="text-center">No records</p>
+</div>

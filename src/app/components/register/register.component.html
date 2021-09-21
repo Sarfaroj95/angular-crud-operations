@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 left-section"></div>
+    <div class="col-9">
+      <div class="container h-100 right-section">
+        <div class="d-flex justify-content-between">
+          <a routerLink="/signin" type="submit" class="btn btn-primary"
+            >Sign in</a
+          >
+          <a routerLink="/signup" type="submit" class="btn btn-danger"
+            >Sign up</a
+          >
+        </div>
+        <div class="form-section">
+          <div class="row">
+            <div class="col-6">
+              <h5 class="text-primary">Welcome iBook</h5>
+              <h2>Register to your personal information</h2>
+            </div>
+            <div class="col-6">
+              <div *ngIf="msg" class="toaster-succes">
+                {{ msg }}
+              </div>
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mt-3">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control sd"
+                      placeholder="Enter first name"
+                      formControlName="first_name"
+                    />
+                  </div>
+                  <div class="form-group mt-3">
+                    <input
+                      type="text"
+                      class="form-control sd"
+                      placeholder="Enter last name"
+                      formControlName="last_name"
+                    />
+                  </div>
+                  <div class="form-group mt-3">
+                    <input
+                      type="email"
+                      class="form-control sd"
+                      placeholder="Enter email"
+                      formControlName="email"
+                    />
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input
+                    type="password"
+                    class="form-control sd"
+                    placeholder="Password"
+                    formControlName="password"
+                  />
+                </div>
+                <div class="mt-4 d-flex justify-content-between">
+                  <button type="submit" class="btn btn-danger sd">
+                    Sign Up <span style="font-size: 18px">&#8250;</span>
+                  </button>
+                  <a routerLink="/signin">Already have an account? Sign in</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

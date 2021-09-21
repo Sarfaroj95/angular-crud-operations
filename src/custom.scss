@@ -1,0 +1,10 @@
+// $primary: #57d900;
+// $danger: #f18984;
+$theme-colors: (
+  "primary": #19180a,
+  "danger": #e71d36,
+  "dark": #0ead69,
+  "light": #fbdeda,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";

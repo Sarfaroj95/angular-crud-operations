@@ -1,0 +1,17 @@
+.fa {
+  font-size: 20px !important;
+  cursor: pointer;
+}
+
+.action-icon {
+  margin-right: 14px !important;
+}
+
+.fa-pencil-square-o:hover {
+  color: blue;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.fa-trash-o:hover {
+  color: red;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
