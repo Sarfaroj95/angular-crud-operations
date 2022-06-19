@@ -24,6 +24,15 @@
       "dob": "2021-08-02",
       "class": "one",
       "id": 1
+    },
+    {
+      "sname": "Swakti",
+      "fname": "Sworaj",
+      "address": "Kolkata",
+      "phone": "1234567890",
+      "dob": "2022-06-19",
+      "class": "three",
+      "id": 2
     }
   ]
 }
